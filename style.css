@@ -1,0 +1,20 @@
+body {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: ;
+}
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 250px;
+    height: 250px;
+    background-color: black;
+    color:white; 
+    border: solid red;
+    text-align: center;
+    font-size: 50px;
+    cursor: pointer;   
+} 
+
