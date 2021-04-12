@@ -1,10 +1,5 @@
-const $div = $("div")
+const $body = $("body")
 
-const clickHandler = (event) => {
-  console.log(event)
-}
-
-$div.on("click", (event) => {
   const cards = [
     'https://www.trustedtarot.com/img/cards/the-fool.png',
     'https://www.trustedtarot.com/img/cards/the-magician.png',
@@ -23,8 +18,23 @@ $div.on("click", (event) => {
     'https://www.trustedtarot.com/img/cards/the-tower.png',
     'https://www.trustedtarot.com/img/cards/the-moon.png'
   ]
-  $div = $("div")
-  cards.forEach((item) => {
-    $div.append("<img src = 'https://www.trustedtarot.com/img/cards/the-fool.png' />")
-  })
+
+const $mDiv = $("<div>")
+$mDiv.text("Add image").addClass("box").addClass("mDiv")
+$body.append($mDiv)
+
+const popupImage = () => {
+  let random = Math.floor(Math.random() * cards.length);
+  return cards[random]
+}
+
+const makeCard = () => {
+  const $div = $("<div>").addClass("box")
+  const $image = $("<img>").attr("src", popupImage()).addClass("box")
+  $div.append($image)
+  $body.append($div)
+}
+
+$mDiv.on("click", (event) =>{
+  makeCard()
 })

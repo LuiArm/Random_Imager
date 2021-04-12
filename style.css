@@ -3,17 +3,15 @@ body {
     flex-wrap: wrap;
 }  
 
-div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    width: 250px;
-    height: 250px;
+.mDiv {
     background-color: black;
     color:white; 
-    border: solid red;
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
     cursor: pointer;   
 } 
 
+.box {
+    height:100px;
+    width:100px;
+}
